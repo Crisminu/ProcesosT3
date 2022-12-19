@@ -1,0 +1,29 @@
+La búsqueda de la eficiencia de un programa no debe chocar con un buen diseño y una codificación
+clara y legible. La creación de programas eficientes tiene poco que ver con “trucos de
+programación” si no, al contrario, se basan en una buena organización de la información y buenos
+algoritmos. Un programador que no domine los principios básicos de diseños claros y limpios
+probablemente no escribirá programas eficientes. A la inversa, programas claros requieren organizaciones
+de datos claras y algoritmos claros, precisos y transparentes.
+La mayoría de los departamentos informáticos reconocen que las destrezas de buena programación
+requieren un fuerte énfasis en los principios básicos de ingeniería de software. Por
+consiguiente, una vez que un programador ha aprendido los principios para diseñar e implementar
+programas claros y precisos, el paso siguiente es estudiar los efectos de las organizaciones de
+datos y los algoritmos en la eficiencia de un programa.
+El enfoque del libro
+En esta obra se muestran numerosas técnicas de representación de datos. En su contexto las
+mismas se engloban en los siguientes principios:
+1. Cada estructura de datos tiene sus costes y sus beneficios. Los programadores y diseñadores
+necesitan una comprensión rigurosa y completa de cómo evaluar los costes y
+beneficios para adaptarse a los nuevos retos que afronta la construcción de la aplicación.
+Estas propiedades requieren un conocimiento o comprensión de los principios del análisis
+de algoritmos y también una consideración práctica de los efectos significativos del medio
+físico empleado (p.e. datos almacenados en un disco frente a memoria principal).
+2. Los temas relativos a costes y beneficios se consideran dentro del concepto de elemento
+de compensación. Por ejemplo, es bastante frecuente reducir los requisitos de tiempo en
+beneficio de un incremento de requisitos de espacio en memoria, o viceversa.
+3. Los programadores no deben reinventar la rueda continuamente. Por consiguiente, los
+estudiantes necesitan aprender las estructuras de datos utilizadas junto con los algoritmos
+correspondientes.
+4. Los datos estructurados siguen a las necesidades. Los estudiantes deben aprender a evaluar
+primero las necesidades de la aplicación y, a continuación, encontrar una estructura
+de datos en correspondencia con sus funcionalidades.
