@@ -2,19 +2,20 @@ package org.example;
 // servidor
 import java.io.*;
 import java.net.*;
-import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
 
 public class Servidor {
 
-    public static void main(String argv[]) {
+    public static void main(String[] argv) {
 
         //Definimos los Sockets
         ServerSocket servidor; // Socket de escucha del servidor
         Socket cliente; // Socket para atender a un cliente
         int numCliente = 0; // Contador de clientes 
-        int PUERTO = 5000; // Puerto para esuchar
+        int PUERTO = 50000; // Puerto para esuchar
         
-        System.out.println("Soy el servidor y empiezo a escuchr petienciones por el puerto: " + PUERTO);
+        System.out.println("Soy el servidor y empiezo a escuchar peticiones por el puerto: " + PUERTO);
 
         try {
             // Apertura de socket para escuhar a través de un puerto
@@ -34,13 +35,11 @@ public class Servidor {
                 DataInputStream datos = new DataInputStream(cliente.getInputStream());
                 String uno=datos.readUTF();
                 File file = new File(uno);
-                FileReader fr = new FileReader(file, StandardCharsets.UTF_8);
-                BufferedReader br = new BufferedReader(fr);
-                String line;
-                while((line=br.readLine())!=null){
-                    ps.writeUTF(line + "\n");
-                }
-                // Y cerramos la conexión porque ya no vamos a oprrar más con él
+                FileReader fr = new FileReader(file);
+                Path ruta = Path.of(uno);
+                String contenido = Files.readString(ruta);
+                ps.writeUTF(contenido);
+                // Y cerramos la conexión porque ya no vamos a operar más con él
                 cliente.close();
                 System.out.println("\t Se ha cerrado la conexión con el cliente: " +numCliente);
             } while (true);
